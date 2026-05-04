@@ -252,6 +252,36 @@ Hello From Your Web Server!
 * 📊 Monitoramento
 * 🔄 Escalabilidade
 
+Módulo da EC2 da Seção 5 a 8 + as atividades da plataforma
+
+Task 1: Criar a função Lambda
+
+Criar uma função chamada myStopinator no AWS Lambda
+Usar Python 3.11
+Selecionar uma role existente (myStopinatorRole)
+
+Task 2: Configurar o gatilho
+
+Adicionar um trigger com EventBridge
+Criar uma regra chamada everyMinute
+Definir execução a cada 1 minuto
+
+Task 3: Configurar a função
+
+Substituir o código da função
+Inserir a região da AWS
+Inserir o ID da instância EC2
+O código faz a instância parar automaticamente
+
+Task 4: Verificar funcionamento
+
+Conferir no EC2 se a instância foi parada
+Se ligar novamente, ela será parada de novo automaticamente
+
+Finalização
+
+Enviar a atividade
+Encerrar o laboratório
 
 
 
