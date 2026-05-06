@@ -251,6 +251,7 @@ Hello From Your Web Server!
 * 🔐 Segurança
 * 📊 Monitoramento
 * 🔄 Escalabilidade
+  
 
 Módulo da EC2 da Seção 5 a 8 + as atividades da plataforma
 
@@ -326,25 +327,33 @@ Adiciona um script que instala Apache, PHP e um app web automaticamente.
 
 Depois, acessa o servidor pelo DNS público e vê a página funcionando.
 
+
+
 S3  AWS
+
 🚀 LABORATÓRIO AWS: GERENCIAMENTO DE VOLUMES COM Amazon EC2 E Amazon EBS
+
 🎯 OBJETIVO
 
 Aprender a criar, anexar, configurar e restaurar volumes na AWS, garantindo armazenamento persistente e recuperação de dados.
+
 
 🧱 CRIAÇÃO DO VOLUME EBS
 Volume de 1 GiB (gp2) criado
 Mesma Zona de Disponibilidade da instância
 Tag adicionada: Name = My Volume
 
+
 🔗 ANEXANDO À INSTÂNCIA
 Volume conectado à instância Lab
 Dispositivo definido como /dev/sdb
 Estado: em uso
 
+
 💻 ACESSO À INSTÂNCIA
 Conexão via Session Manager
 Login como ec2-user
+
 
 ⚙️ CONFIGURAÇÃO DO SISTEMA DE ARQUIVOS
 Sistema de arquivos ext3 criado
@@ -352,10 +361,12 @@ Montagem em /mnt/data-store
 Configuração automática no /etc/fstab
 Arquivo de teste (file.txt) criado e verificado
 
+
 📸 CRIAÇÃO DE SNAPSHOT (BACKUP)
 Snapshot criado: My Snapshot
 Armazena apenas dados utilizados
 Arquivo original removido para teste
+
 
 ♻️ RESTAURAÇÃO DO SNAPSHOT
 Novo volume criado (Restored Volume)
@@ -363,15 +374,16 @@ Anexado como /dev/sdc
 Montado em /mnt/data-store2
 Arquivo restaurado com sucesso ✅
 
+
 🏁 CONCLUSÃO
 Volume EBS criado e configurado
 Snapshot realizado
 Dados restaurados com sucesso
 
+
 💡 RESUMO FINAL
 
+
 CRIAR → ANEXAR → CONFIGURAR → SALVAR → RESTAURAR
-
-
 
 ---
