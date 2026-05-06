@@ -326,6 +326,31 @@ Adiciona um script que instala Apache, PHP e um app web automaticamente.
 
 Depois, acessa o servidor pelo DNS público e vê a página funcionando.
 
+S3 AWS 
+🔹 1. Criar volume EBS
+Criou um novo volume (1 GiB, tipo gp2) na mesma Zona de Disponibilidade da instância.
+Adicionou uma tag com nome “My Volume”.
+🔹 2. Anexar à instância EC2
+Conectou o volume à instância (Lab).
+Definiu o dispositivo como /dev/sdb.
+Volume passou para estado “em uso”.
+🔹 3. Conectar à instância
+Acessou via Session Manager.
+Entrou como usuário ec2-user.
+🔹 4. Configurar sistema de arquivos
+Criou sistema de arquivos ext3 no volume.
+Montou em /mnt/data-store.
+Configurou montagem automática no /etc/fstab.
+Criou e verificou um arquivo (file.txt) no volume.
+🔹 5. Criar snapshot
+Criou um snapshot chamado “My Snapshot”.
+Snapshot armazena apenas dados usados (otimiza espaço).
+Excluiu o arquivo do volume original.
+🔹 6. Restaurar snapshot
+Criou novo volume a partir do snapshot (“Restored Volume”).
+Anexou como /dev/sdc.
+Montou em /mnt/data-store2.
+Confirmou que o arquivo deletado foi restaurado.
 
 
 
