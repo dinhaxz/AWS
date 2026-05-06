@@ -283,6 +283,49 @@ Finalização
 Enviar a atividade
 Encerrar o laboratório
 
+Faça o módulo 5 e seu laboratório , e documente em um readme no github
+Tarefa 1 – Criar a VPC
+Você cria uma VPC completa usando o assistente “VPC e mais”, incluindo:
+
+1 VPC (10.0.0.0/16)
+1 sub-rede pública (10.0.0.0/24) e 1 privada (10.0.1.0/24)
+1 Gateway da Internet (para acesso público)
+1 Gateway NAT (para dar internet à sub-rede privada)
+Tabelas de roteamento para cada sub-rede
+
+A sub-rede pública acessa a internet diretamente via Gateway da Internet, enquanto a privada acessa via NAT (sem exposição direta).
+
+Tarefa 2 – Criar sub-redes adicionais
+Você adiciona mais duas sub-redes em outra Zona de Disponibilidade:
+
+1 pública (10.0.2.0/24)
+1 privada (10.0.3.0/24)
+
+Depois, associa:
+
+Sub-redes privadas → tabela de rotas com NAT
+Sub-redes públicas → tabela de rotas com Internet Gateway
+
+Isso melhora a alta disponibilidade.
+
+Tarefa 3 – Criar Grupo de Segurança
+Cria um grupo de segurança (firewall) chamado Web Security Group, permitindo:
+
+Entrada HTTP (porta 80) de qualquer lugar
+
+Tarefa 4 – Criar instância EC2 (servidor web)
+Você lança uma instância EC2 com:
+
+Amazon Linux 2023
+Tipo t2.micro
+Sub-rede pública
+IP público ativado
+Grupo de segurança criado
+
+Adiciona um script que instala Apache, PHP e um app web automaticamente.
+
+Depois, acessa o servidor pelo DNS público e vê a página funcionando.
+
 
 
 
