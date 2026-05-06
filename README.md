@@ -253,28 +253,28 @@ Hello From Your Web Server!
 * 🔄 Escalabilidade
   
 
-Módulo da EC2 da Seção 5 a 8 + as atividades da plataforma
+## Módulo da EC2 da Seção 5 a 8 + as atividades da plataforma
 
-Task 1: Criar a função Lambda
+# Task 1: Criar a função Lambda
 
 Criar uma função chamada myStopinator no AWS Lambda
 Usar Python 3.11
 Selecionar uma role existente (myStopinatorRole)
 
-Task 2: Configurar o gatilho
+# Task 2: Configurar o gatilho
 
 Adicionar um trigger com EventBridge
 Criar uma regra chamada everyMinute
 Definir execução a cada 1 minuto
 
-Task 3: Configurar a função
+# Task 3: Configurar a função
 
 Substituir o código da função
 Inserir a região da AWS
 Inserir o ID da instância EC2
 O código faz a instância parar automaticamente
 
-Task 4: Verificar funcionamento
+# Task 4: Verificar funcionamento
 
 Conferir no EC2 se a instância foi parada
 Se ligar novamente, ela será parada de novo automaticamente
@@ -329,61 +329,60 @@ Depois, acessa o servidor pelo DNS público e vê a página funcionando.
 
 
 
-S3  AWS
+## S3  AWS
 
-🚀 LABORATÓRIO AWS: GERENCIAMENTO DE VOLUMES COM Amazon EC2 E Amazon EBS
+# 🚀 LABORATÓRIO AWS: GERENCIAMENTO DE VOLUMES COM Amazon EC2 E Amazon EBS
 
-🎯 OBJETIVO
+# 🎯 OBJETIVO
 
-Aprender a criar, anexar, configurar e restaurar volumes na AWS, garantindo armazenamento persistente e recuperação de dados.
+* Aprender a criar, anexar, configurar e restaurar volumes na AWS, garantindo armazenamento persistente e recuperação de dados.
 
 
-🧱 CRIAÇÃO DO VOLUME EBS
+# 🧱 CRIAÇÃO DO VOLUME EBS
 Volume de 1 GiB (gp2) criado
 Mesma Zona de Disponibilidade da instância
 Tag adicionada: Name = My Volume
 
 
-🔗 ANEXANDO À INSTÂNCIA
+# 🔗 ANEXANDO À INSTÂNCIA
 Volume conectado à instância Lab
 Dispositivo definido como /dev/sdb
 Estado: em uso
 
 
-💻 ACESSO À INSTÂNCIA
+# 💻 ACESSO À INSTÂNCIA
 Conexão via Session Manager
 Login como ec2-user
 
 
-⚙️ CONFIGURAÇÃO DO SISTEMA DE ARQUIVOS
+# ⚙️ CONFIGURAÇÃO DO SISTEMA DE ARQUIVOS
 Sistema de arquivos ext3 criado
 Montagem em /mnt/data-store
 Configuração automática no /etc/fstab
 Arquivo de teste (file.txt) criado e verificado
 
 
-📸 CRIAÇÃO DE SNAPSHOT (BACKUP)
+# 📸 CRIAÇÃO DE SNAPSHOT (BACKUP)
 Snapshot criado: My Snapshot
 Armazena apenas dados utilizados
 Arquivo original removido para teste
 
 
-♻️ RESTAURAÇÃO DO SNAPSHOT
+# ♻️ RESTAURAÇÃO DO SNAPSHOT
 Novo volume criado (Restored Volume)
 Anexado como /dev/sdc
 Montado em /mnt/data-store2
 Arquivo restaurado com sucesso ✅
 
 
-🏁 CONCLUSÃO
+# 🏁 CONCLUSÃO
 Volume EBS criado e configurado
 Snapshot realizado
 Dados restaurados com sucesso
 
 
-💡 RESUMO FINAL
+# 💡 RESUMO FINAL
 
 
 CRIAR → ANEXAR → CONFIGURAR → SALVAR → RESTAURAR
-
 ---
