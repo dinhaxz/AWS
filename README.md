@@ -326,33 +326,51 @@ Adiciona um script que instala Apache, PHP e um app web automaticamente.
 
 Depois, acessa o servidor pelo DNS público e vê a página funcionando.
 
-S3 AWS 
-🔹 1. Criar volume EBS
-Criou um novo volume (1 GiB, tipo gp2) na mesma Zona de Disponibilidade da instância.
-Adicionou uma tag com nome “My Volume”.
-🔹 2. Anexar à instância EC2
-Conectou o volume à instância (Lab).
-Definiu o dispositivo como /dev/sdb.
-Volume passou para estado “em uso”.
-🔹 3. Conectar à instância
-Acessou via Session Manager.
-Entrou como usuário ec2-user.
-🔹 4. Configurar sistema de arquivos
-Criou sistema de arquivos ext3 no volume.
-Montou em /mnt/data-store.
-Configurou montagem automática no /etc/fstab.
-Criou e verificou um arquivo (file.txt) no volume.
-🔹 5. Criar snapshot
-Criou um snapshot chamado “My Snapshot”.
-Snapshot armazena apenas dados usados (otimiza espaço).
-Excluiu o arquivo do volume original.
-🔹 6. Restaurar snapshot
-Criou novo volume a partir do snapshot (“Restored Volume”).
-Anexou como /dev/sdc.
-Montou em /mnt/data-store2.
-Confirmou que o arquivo deletado foi restaurado.
+S3  AWS
+🚀 LABORATÓRIO AWS: GERENCIAMENTO DE VOLUMES COM Amazon EC2 E Amazon EBS
+🎯 OBJETIVO
 
+Aprender a criar, anexar, configurar e restaurar volumes na AWS, garantindo armazenamento persistente e recuperação de dados.
 
+🧱 CRIAÇÃO DO VOLUME EBS
+Volume de 1 GiB (gp2) criado
+Mesma Zona de Disponibilidade da instância
+Tag adicionada: Name = My Volume
+
+🔗 ANEXANDO À INSTÂNCIA
+Volume conectado à instância Lab
+Dispositivo definido como /dev/sdb
+Estado: em uso
+
+💻 ACESSO À INSTÂNCIA
+Conexão via Session Manager
+Login como ec2-user
+
+⚙️ CONFIGURAÇÃO DO SISTEMA DE ARQUIVOS
+Sistema de arquivos ext3 criado
+Montagem em /mnt/data-store
+Configuração automática no /etc/fstab
+Arquivo de teste (file.txt) criado e verificado
+
+📸 CRIAÇÃO DE SNAPSHOT (BACKUP)
+Snapshot criado: My Snapshot
+Armazena apenas dados utilizados
+Arquivo original removido para teste
+
+♻️ RESTAURAÇÃO DO SNAPSHOT
+Novo volume criado (Restored Volume)
+Anexado como /dev/sdc
+Montado em /mnt/data-store2
+Arquivo restaurado com sucesso ✅
+
+🏁 CONCLUSÃO
+Volume EBS criado e configurado
+Snapshot realizado
+Dados restaurados com sucesso
+
+💡 RESUMO FINAL
+
+CRIAR → ANEXAR → CONFIGURAR → SALVAR → RESTAURAR
 
 
 
